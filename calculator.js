@@ -61,7 +61,7 @@ $( document ).keypress( function( event ) {
   	selectNext();
   }
 
-console.log(event.key, numSwitches)
+console.log(event.key, numSwitches, event.key === 'b', numSwitches === 2, event.key === 'b' && numSwitches === 2 )
   if ( event.key === 'b' && numSwitches === 2 ) {
   	console.log('bee')
   	selectNext();
@@ -83,7 +83,7 @@ $( 'input[name=num-switches]' ).click( () => {
 	selectedRow = 0;
 	selectedCol = 0;
 	selectItem(null)
-	numSwitches = $('input[name=num-switches]:checked').val();
+	numSwitches = parseInt( $('input[name=num-switches]:checked').val() );
 } );
 
 
