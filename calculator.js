@@ -61,22 +61,22 @@ $( document ).keypress( function( event ) {
   	selectNext();
   }
 
-console.log(event.key, numSwitches, event.key === 'b', numSwitches === 2, event.key === 'b' && numSwitches === 2 )
   if ( event.key === 'b' && numSwitches === 2 ) {
-  	console.log('bee')
   	selectNext();
-  }
-  else {
-  	console.log('weee')
   }
 });
 
-setInterval( () => {
-	console.log( numSwitches, isSelectingRow, selectedRow, selectedCol );
-  if ( numSwitches === 1 ) {
-    selectNext();
-  }
-}, 750 );
+
+// Variable interval solution from https://stackoverflow.com/questions/18963377/use-variable-as-time-in-setinterval-settimeout
+const timeout = () => {
+	setTimeout( () => {
+    	if ( numSwitches === 1 ) {
+    		selectNext();
+    	}
+        timeout();
+    }, parseInt( $( 'input[name=interval]' ).val() ) );
+};
+timeout();
 
 $( 'input[name=num-switches]' ).click( () => {
 	isSelectingRow = true;

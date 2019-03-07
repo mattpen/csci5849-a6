@@ -38,19 +38,43 @@
 			</div>
 		</div>
 		<div id="controls">
-			<input id="1-switch" type="radio" name="num-switches" value="1" checked="checked">
-			<label for="1-switch">One Switch</label><br>
-			<input id="2-switch" type="radio" name="num-switches" value="2">
-			<label for="2-switch">Two Switches</label><br>
+			<input id="1-switch" type="radio" name="num-switches" value="1" checked="checked"/>
+			<label for="1-switch">One Switch</label><br/>
+
+			<label for="interval">Timer length (ms)</label>
+			<input id="interval" type="number" name="interval" value="750"/><br/>
+
+			<input id="2-switch" type="radio" name="num-switches" value="2"/>
+			<label for="2-switch">Two Switches</label><br/>
 		</div>
 		<div id="comments">
 			<h2>About this app</h2>
 			<p>Include information here about your app.</p>
 			<ul>
-				<li>Instructions for using the app</li>
-				<li>Test results</li>
-				<li>Anything else you have tried out</li>
+				<li><a href="#instructions">Instructions for using the app</a></li>
+				<li><a href="#test">Test description</a></li>
+				<li><a href="#results">Test results</a></li>
 			</ul>
+
+			<h2 id="#instructions">Instructions for using the app</h2>
+			<p>The app has two switch modes, one button and two button.  You can select which mode using the radio buttons above.  The two switch mode uses the 'a' key to move forward and the 'b' key to select.  The one switch mode moves forward at regular intervals as defined in the number picker above.  In the one switch mode, you press the 'a' key to select.</p>
+			<p>Both modes use row column scanning to improve input times.  The app starts by scanning rows.  When select is pressed, it scans through all the columns.  If select is pressed while scanning columns, the selected item is clicked.  If select is not pressed after all columns have been iterated through, then it returns to scanning rows.</p>
+
+			<h2 id="#test">Test description</h2>
+			<p>I conducted three tests of 8 equations each.  The first test was one switch mode at an interval of 750 ms.  The second test was one switch mode at an interval of 1500ms.  The third test was using two switch mode. The following equations were tested.</p>
+			<ul>
+				<li>5+3</li>
+				<li>54/52</li>
+				<li>314-109</li>
+				<li>1012*5346</li>
+				<li>28*32/86</li>
+				<li>704+324-182</li>
+				<li>1432+986*32-8</li>
+				<li>203*46+97/43-75</li>
+			</ul>
+
+			<h2 id="#results">Test results</h2>
+			<p></p>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 		<script src="calculator.js" type="text/javascript"></script>
