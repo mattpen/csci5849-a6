@@ -22,7 +22,6 @@ function selectItem(name) {
 // selectDown: select the item below
 
 function selectNext() {
-	console.log( 'next');
     if ( isSelectingRow  ) {
     	selectedRow = selectedRow % 4 + 1;
     	selectItem( '.row' + selectedRow );
@@ -47,7 +46,6 @@ function clickSelectedItem() {
 // this function responds to user key presses
 // you'll rewrite this to control your interface using some number of keys
 $( document ).keypress( function( event ) {
-	console.log(event.key, numSwitches);
   if ( event.key === 'a' ) {
   	if ( isSelectingRow ) {
   		isSelectingRow = false;

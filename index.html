@@ -49,6 +49,7 @@
 		</div>
 		<div id="comments">
 			<h2>About this app</h2>
+			<p>Author: Matt Pennington</p>
 			<p>Include information here about your app.</p>
 			<ul>
 				<li><a href="#instructions">Instructions for using the app</a></li>
@@ -61,20 +62,62 @@
 			<p>Both modes use row column scanning to improve input times.  The app starts by scanning rows.  When select is pressed, it scans through all the columns.  If select is pressed while scanning columns, the selected item is clicked.  If select is not pressed after all columns have been iterated through, then it returns to scanning rows.</p>
 
 			<h2 id="#test">Test description</h2>
-			<p>I conducted three tests of 8 equations each.  The first test was one switch mode at an interval of 750 ms.  The second test was one switch mode at an interval of 1500ms.  The third test was using two switch mode. The following equations were tested.</p>
+			<p>I conducted 3 tests of 5 equations each.  The first test was in 1-switch mode at an interval of 750 ms.  The second test was 1-switch mode at an interval of 1500ms.  The third test was using 2-switch mode. The following equations were tested. There is an equal distribution of numbers and operations.</p>
 			<ul>
-				<li>5+3</li>
-				<li>54/52</li>
-				<li>314-109</li>
-				<li>1012*5346</li>
-				<li>28*32/86</li>
-				<li>704+324-182</li>
-				<li>1432+986*32-8</li>
-				<li>203*46+97/43-75</li>
+				<li>58+37=</li>
+				<li>57/52=</li>
+				<li>314-209=</li>
+				<li>1012*306=</li>
+				<li>48*47+96/86-9=</li>
 			</ul>
 
 			<h2 id="#results">Test results</h2>
-			<p></p>
+			<table>
+				<tr>
+					<th>Mode</th>
+					<th>Trial 1 time</th>
+					<th>Trial 1 errors</th>
+					<th>Trial 2 time</th>
+					<th>Trial 2 errors</th>
+					<th>Trial 3 time</th>
+					<th>Trial 3 errors</th>
+					<th>Avg time/Eq</th>
+					<th>Avg errors/Eq</th>
+				</tr>
+				<tr>
+					<td>1-switch, 750ms</td>
+					<td>2:57</td>
+					<td>2</td>
+					<td>3:16</td>
+					<td>2</td>
+					<td>3:46</td>
+					<td>6</td>
+					<td>3:19</td>
+					<td>3.33</td>
+				</tr>
+				<tr>
+					<td>1-switch, 1500ms</td>
+					<td>3:46</td>
+					<td>1</td>
+					<td>4:13</td>
+					<td>2</td>
+					<td>4:11</td>
+					<td>1</td>
+					<td>4:03</td>
+					<td>1.33</td>
+				</tr>
+				<tr>
+					<td>2-switch</td>
+					<td>2:52</td>
+					<td>2</td>
+					<td>1:43</td>
+					<td>6</td>
+					<td>3:01</td>
+					<td>6</td>
+					<td>2:32</td>
+					<td>4.67</td>
+				</tr>
+			</table>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 		<script src="calculator.js" type="text/javascript"></script>

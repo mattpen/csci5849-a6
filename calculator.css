@@ -34,3 +34,16 @@ label {
     padding: 5px;
     margin: 5px;
 }
+
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th {
+    background: lightgrey;
+}
+
+td:first-child {
+    background: aliceblue;
+}
